@@ -1,0 +1,191 @@
+
+
+body {
+    display:flex;
+    flex-direction:column;
+    background-color:rgb(182, 183, 184);
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  h1 {
+    color: #ffffff;
+    font-size: 1.4em;
+    margin: 1em;
+    padding-bottom:40px;
+  }
+
+
+  .search {
+   display:flex;
+   align-content:center;
+   margin:auto;
+   padding:10px;
+   width:40%;
+  }
+  
+  .grid-container {
+    display:grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows:repeat(4, auto);
+    grid-gap:1em;
+    padding-top:25px;
+    overflow:auto;
+    grid-template-areas: 
+    "card card card"
+    "card card card"
+    "card card card"
+    "card card card";
+    grid-area:card;
+  }
+
+
+
+/**** CARDS ****/
+  
+  .card {
+    display:flex;
+    align-content:center;
+    align-items:center;
+    justify-content: center;
+    border: thin grey solid;
+    background-color:rgb(224, 224, 224);
+    margin:1em;
+    padding:10px;
+    cursor: pointer;
+  }
+  
+
+  
+  .card-hidden {
+    display: none;
+  }
+
+
+
+ .avatar-container img {
+    display:flex;
+    align-content:flex-start;
+    text-align:left;
+    padding-right:10px;
+    border-radius:50%;
+    height:100px;
+    width:100px;
+ }
+  
+  .text-container {
+      display:flex;
+      margin:auto;
+      align-items:center;
+      color:#868686;
+     
+  }
+
+  
+  .name,
+  .city,
+  .address {
+    text-transform: capitalize;
+  }
+  
+  .name {
+    font-weight: bold;
+    font-size: 1.2em;
+    color:black;
+  }
+  
+
+  .phone {
+    margin-top:-20px;
+}
+
+
+
+
+  
+  
+  /**** Overlay ****/
+
+  .modal{
+    display:none;
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    padding-top:25px;
+    background: rgba(100, 100, 100, 0.4)
+  }
+  
+  .modal-content {
+    animation-name: overlayEffect;
+    animation-duration: .8s;
+    background-color:#ffffff;
+    color:#868686;
+    display:flex;
+    flex-direction:column;
+    margin: auto;
+    width:30%;
+    height:auto;
+    align-items:center;
+  }
+
+.modal-content img {
+      width:50%;
+      border-radius:50%;
+      margin-top:1em;
+  }
+
+
+  .name-overlay,
+  .email-overlay,
+  .city-overlay {
+      margin:.4em;
+      text-transform: capitalize;
+  }
+
+  .name-overlay {
+      font-weight: bold;
+      font-size:1.3em;
+      color:black;
+      padding-top:10px;
+  }
+  
+  .city-overlay {
+      border-bottom:#868686 solid 1px;
+      padding:0 100px 35px 100px;
+      margin-right:1em;
+  }
+
+
+    .phone {
+        margin-top:5px;
+  }
+
+  .birthday {
+      margin-bottom:
+      1em;
+  }
+
+ 
+
+  .phone,
+  .address {
+    margin-bottom:.7em;
+  }
+
+  
+  .close-modal {
+    cursor: pointer;
+    margin-left:175px;
+    position: absolute;
+    background-color:#fff;
+
+  }
+  
+
+  @keyframes overlayEffect {
+    from{opacity: 0}
+    to{opacity: 1}
+  }
+
+
